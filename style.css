@@ -1,0 +1,103 @@
+/* style for project archive */
+
+
+body {
+
+    background-color: #eeeeee;
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 20px;
+}
+
+a:link {
+    color:#eeeeee;
+    text-decoration:none;
+}
+
+a:visited {
+    color:#eeeeee;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#eeeeee;
+    opacity: 0.6;
+}
+
+#l1 {
+
+    background-color: black;
+    height: 3px;
+    width: 100%;
+    border-top: solid #eeeeee;
+    border-width: 5px;
+
+}
+
+#header {
+
+    color: black;
+    text-align: left;
+    padding: 2px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    font-size: 35px;
+
+}
+
+#m1 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+
+}
+
+#m2 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+
+}
+
+#m3 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+
+}
+
+#mf {
+
+    background-color: black;
+    height: 54px;
+    width: calc(100% - 500px);
+    float: left;
+
+}
+
+#l2 {
+
+    background-color: black;
+    height: 1px;
+    width: calc(100% - 30px);
+    border-top: solid #eeeeee;
+    border-width: 60px;
+
+}
