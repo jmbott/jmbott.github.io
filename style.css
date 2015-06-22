@@ -33,7 +33,7 @@ a:hover {
 
 }
 
-#header {
+#h1 {
 
     color: black;
     text-align: left;
@@ -99,5 +99,25 @@ a:hover {
     width: calc(100% - 30px);
     border-top: solid #eeeeee;
     border-width: 60px;
+
+}
+
+#h2 {
+
+    color: black;
+    text-align: left;
+    padding: 2px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    font-size: 25px;
+
+}
+
+#p1 {
+
+    width: 800px;
+    height: 533px;
+    float: left;
+
 
 }
