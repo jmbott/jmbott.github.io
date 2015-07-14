@@ -9,17 +9,17 @@ body {
 }
 
 a:link {
-    color:#eeeeee;
+    color: #eeeeee;
     text-decoration:none;
 }
 
 a:visited {
-    color:#eeeeee;
+    color: #eeeeee;
     text-decoration:none;
 }
 
 a:hover {
-    color:#eeeeee;
+    color: #eeeeee;
     opacity: 0.6;
 }
 
