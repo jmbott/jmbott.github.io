@@ -5,7 +5,8 @@ body {
 
     background-color: #eeeeee;
     font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-    font-size: 20px;
+    font-size: 15px;
+    min-width: 500px;
 }
 
 a:link {
@@ -54,6 +55,7 @@ a:hover {
     float: left;
     padding: 2px;
     border-right: solid #eeeeee;
+    font-size: 20px;
 
 }
 
@@ -67,6 +69,7 @@ a:hover {
     float: left;
     padding: 2px;
     border-right: solid #eeeeee;
+    font-size: 20px;
 
 }
 
@@ -80,6 +83,7 @@ a:hover {
     float: left;
     padding: 2px;
     border-right: solid #eeeeee;
+    font-size: 20px;
 
 }
 
@@ -107,7 +111,6 @@ a:hover {
     color: black;
     text-align: left;
     padding: 2px;
-    padding-bottom: 40px;
     padding-top: 20px;
     font-size: 25px;
 
@@ -118,6 +121,32 @@ a:hover {
     width: 800px;
     height: 533px;
     float: left;
+    padding-top: 40px;
 
+
+}
+
+#info {
+
+    float: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 135%;
+
+}
+
+#link_bar {
+
+    float: left;
+    padding-left: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 135%;
+    width: calc(100% - 70px);
+    border-top: solid #eeeeee;
+    background-color: black;
+    word-spacing: 30px;
 
 }
