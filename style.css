@@ -9,6 +9,10 @@ body {
     min-width: 500px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 a:link {
     color: #eeeeee;
     text-decoration:none;
@@ -112,17 +116,17 @@ a:hover {
     text-align: left;
     padding: 2px;
     padding-top: 20px;
-    font-size: 25px;
+    font-size: 22px;
 
 }
 
 #p1 {
 
-    width: 800px;
-    height: 533px;
+    width: 500px;
+    height: 375px;
     float: left;
-    padding-top: 40px;
-
+    padding-top: 20px;
+    padding-bottom: 10px;
 
 }
 
@@ -132,7 +136,7 @@ a:hover {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     line-height: 135%;
 
 }
@@ -150,3 +154,43 @@ a:hover {
     word-spacing: 30px;
 
 }
+
+#time {
+
+    float: left;
+    line-height: 150%;
+    color: #eeeeee;
+    background-color: black;
+    width: 154px;
+    border-top: solid #eeeeee;
+    border-right: solid #eeeeee;
+    border-top-width: 5px;
+    border-right-width: 3px;
+
+}
+
+#history {
+
+    float: left;
+    line-height: 150%;
+    background-color: black;
+    width: 312px;
+    border-top: solid #eeeeee;
+    border-top-width: 5px;
+    border-right: solid #eeeeee;
+    margin-right: calc(100% - 500px);
+
+}
+
+#block {
+
+    float: left;
+    background-color: black;
+    color: black;
+    height: 60px;
+    width: 154px;
+    border-top: solid #eeeeee;
+    border-top-width: 3px;
+
+}
+
