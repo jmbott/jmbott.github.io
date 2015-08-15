@@ -185,12 +185,13 @@ a:hover {
 #block {
 
     float: left;
-    background-color: black;
-    color: black;
-    height: 60px;
-    width: 154px;
+    padding-left: 40px;
+    padding-bottom: 1px;
+    line-height: 135%;
+    width: calc(100% - 70px);
     border-top: solid #eeeeee;
-    border-top-width: 3px;
+    background-color: black;
+    word-spacing: 30px;
 
 }
 
