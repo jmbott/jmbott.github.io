@@ -1,0 +1,202 @@
+/* style for project archive */
+
+
+body {
+
+    background-color: #eeeeee;
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 15px;
+    min-width: 500px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:link {
+    color: #eeeeee;
+    text-decoration:none;
+}
+
+a:visited {
+    color: #eeeeee;
+    text-decoration:none;
+}
+
+a:hover {
+    color: #eeeeee;
+    opacity: 0.6;
+}
+
+#l1 {
+
+    background-color: black;
+    height: 3px;
+    width: 100%;
+    border-top: solid #eeeeee;
+    border-width: 5px;
+
+}
+
+#h1 {
+
+    color: black;
+    text-align: left;
+    padding: 2px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    font-size: 35px;
+
+}
+
+#m1 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+    font-size: 20px;
+
+}
+
+#m2 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+    font-size: 20px;
+
+}
+
+#m3 {
+
+    line-height: 25px;
+    background-color: black;
+    color: #eeeeee;
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding: 2px;
+    border-right: solid #eeeeee;
+    font-size: 20px;
+
+}
+
+#mf {
+
+    background-color: black;
+    height: 54px;
+    width: calc(100% - 500px);
+    float: left;
+
+}
+
+#l2 {
+
+    background-color: black;
+    height: 1px;
+    width: calc(100% - 30px);
+    border-top: solid #eeeeee;
+    border-width: 60px;
+
+}
+
+#h2 {
+
+    color: black;
+    text-align: left;
+    padding: 2px;
+    padding-top: 20px;
+    font-size: 22px;
+
+}
+
+#p1 {
+
+    width: 500px;
+    height: 375px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+#info {
+
+    float: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    line-height: 135%;
+
+}
+
+#link_bar {
+
+    float: left;
+    padding-left: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 135%;
+    width: calc(100% - 70px);
+    border-top: solid #eeeeee;
+    background-color: black;
+    word-spacing: 30px;
+
+}
+
+#time {
+
+    float: left;
+    line-height: 150%;
+    color: #eeeeee;
+    background-color: black;
+    width: 154px;
+    border-top: solid #eeeeee;
+    border-right: solid #eeeeee;
+    border-top-width: 5px;
+    border-right-width: 3px;
+
+}
+
+#history {
+
+    float: left;
+    line-height: 150%;
+    background-color: black;
+    width: 312px;
+    border-top: solid #eeeeee;
+    border-top-width: 5px;
+    border-right: solid #eeeeee;
+    margin-right: calc(100% - 500px);
+
+}
+
+#block {
+
+    float: left;
+    padding-left: 40px;
+    padding-bottom: 1px;
+    line-height: 135%;
+    width: calc(100% - 70px);
+    border-top: solid #eeeeee;
+    background-color: black;
+    word-spacing: 30px;
+
+}
+
+.b {
+
+    color: black;
+
+}
