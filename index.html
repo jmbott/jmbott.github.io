@@ -1,36 +1,104 @@
-<!DOCTYPE html>
-
-<!-- html for project archive -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-    <head>
+	<head>
 
-        <title>Project Archive</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+		<title>Jeffrey Bott Contracting Co.</title>
 
-    </head>
-    <body>
+		<style type="text/css">
 
-            <div id="l1"></div>
-            <div id="h1">Project Archive</div>
+            a:link {
+                color:#38333a;
+                text-decoration:none;
+            }
 
-            <div id="m1"><a href="index.html"><em>Home</em></a></div>
-            <div id="m2"><a href="archive.html"><em>Archive</em></a></div>
-            <div id="m3"><a href="info.html"><em>Info</em></a></div>
-            <div id="mf"></div>
-            <div id="l2"></div>
+            a:visited {
+                color:#38333a;
+                text-decoration:none;
+            }
 
-            <div id="h2">Current Project | <em>Senegal Irrigation</em></div>
+            a:hover {
+                color:#38333a;
+                opacity: 0.6;
+            }
 
-            <!-- href="http://sel.columbia.edu/smart-solar-irrigation/" -->
-            <!-- https://youtu.be/6j8OrWQYoJ4 -->
+            img.logo {
+                position: fixed;
+                top: 50px;
+                left: 50%;
+                margin-left: -300px;
+            }
 
-            <div id="p1"><img src="photos/senegal_500.jpg"></div>
+            .menu {
+                font-family: "Athelas";
+                color: #38333a;
+            }
 
-            <div id="link_bar">
-                <a href="http://sel.columbia.edu/smart-solar-irrigation/"><em>more_detail</em></a>
-            </div>
+            .pos_1 {
+                position: fixed;
+                top: 290px;
+                left: 50%;
+                margin-left: -250px;
 
+                font-size: 20px;
+            }
 
-    </body>
+            .pos_2 {
+                position: fixed;
+                top: 320px;
+                left: 50%;
+                margin-left: -250px;
+
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 600px) { 
+
+                img.logo {
+
+                    width: 300px;
+                    height: 125px;
+
+                    position: fixed;
+                    top: 50px;
+                    left: 50%;
+                    margin-left: -150px;
+                }
+
+                .pos_1 {
+                    position: fixed;
+                    top: 160px;
+                    left: 50%;
+                    margin-left: -125px;
+
+                    font-size: 20px;
+                }
+
+                .pos_2 {
+                    position: fixed;
+                    top: 190px;
+                    left: 50%;
+                    margin-left: -125px;
+
+                    font-size: 20px;
+                }
+
+		</style>
+
+	</head>
+	<body>
+
+		<img src="images/logo.png" class="logo" alt="Jeffrey Bott Contracting Co.">
+
+        <div class="menu">
+            <div class="pos_1">
+                <p><a href="index.html"><b>Home</b></a></p>
+            <div/>
+
+            <div class="pos_2">
+                <p><a href="info.html"><b>info</b></a></p>
+            <div/>
+        <div/>
+
+	</body>
 </html>
