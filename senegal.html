@@ -1,174 +1,74 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
+  <head>
 
-		<title>Senegal Project</title>
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title>Senegal Project</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link href="style-2.css" rel="stylesheet" type="text/css">
 
-		<style type="text/css">
+  </head>
+  <body>
 
-            body {
-                background-color: #eeeeee;
-                font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-                font-size: 15px;
-                min-width: 500px;
-            }
+    <div id="m1"><a href="javascript:history.back()"><em>Back</em></a></div>
+    <div id="mf"></div>
+    <div id="l2"></div>
+    <div id="h1">Senegal | <em>Smart Irrigation</em></div>
 
-            img {
-                border: 0px;
-            }
+    <img src="photos/senegal.jpg" class="photo">
+    <div class="gap2"></div>
 
-            a:hover {
-                opacity: 0.6;
-            }
+    <div class="text">
+      <p>
+        As part of a USAID Powering Agriculture grant I have been working
+        on smart irrigation at The Sustainable Engineering Lab. Three solar
+				systems, 4.8 to 6.8kW, have been installed in Gabar, Senegal to provide
+				irrigation water to twenty one smallholder farmers.
+      </p>
+    </div>
+    <div class="gap2"></div>
 
-            img.photo {
-                float: left;
-                margin-top: 5px;
-                margin-left: 2px;
-                /*left: calc(50% - 250px);*/
-            }
+		<img src="photos/senegal-system.png" class="photo">
+		<div class="gap2"></div>
 
-            img.photo:hover {
-                opacity: 1;
-            }
+		<div class="text">
+			<p>
+				The diagram above shows the basic design. One criterion was to
+				avoid battery storage as much as possible. There is no large battery array
+				or water tower. Water is distributed directly by means of drip or stored
+				at ground level in basins for hand distribution. The motivation behind
+				this design decision is purely economical.
+			</p>
+		</div>
+    <div class="gap2"></div>
 
-            #back {
-                float: left;
-								width: 100%;
-                padding-top: 10px;
-                padding-left: 10px;
-								padding-bottom: 10px;
-                font-size: 20px;
-            }
+    <img src="photos/senegal-6.5.jpg" class="photo">
+    <div class="gap2"></div>
 
-            #back a:link, #back a:visited {
-                text-decoration:none;
-                color: black;
-            }
+    <div class="text">
+      <p>
+        The system is controlled by a Raspberry Pi. The chip above is a "hat"
+        that integrates all the sensors and switches. A pyranometer and a
+				temperature sensor are used to approximate shortwave radiation and
+				cell temperature. Power available is estimated based on those readings.
+      </p>
+      <p>
+				Some of the other elements of the PCB are a real-time clock for more
+				accurate logs, an RS-485 to USB converter for reading an array of smart
+				meters, and a transistor array for signaling the relays on the power
+				electronics.
+			</p>
+    </div>
+		<div class="gap2"></div>
 
-            #text {
-                float: left;
-                margin-top: 10px;
-                margin-left: 20px;
-								margin-right: 10px;
-                line-height: 135%;
-            }
+		<img src="photos/senegal-water.jpg" class="photo">
 
-            #link_bar {
+		<div class="gap"></div>
+    <div id="l2"></div>
+    <div id="link_bar">
+      <a href="http://sel.columbia.edu/smart-solar-irrigation/"><em>blog_link</em></a>
+    </div>
+    <div id="footer"></div>
 
-                float: left;
-                padding-left: 40px;
-                padding-top: 2px;
-                padding-bottom: 2px;
-                line-height: 135%;
-                width: calc(100% - 70px);
-                border-top: solid #eeeeee;
-                background-color: black;
-                word-spacing: 30px;
-
-            }
-
-            #link_bar a:link, #link_bar a:visited {
-                text-decoration:none;
-                color: #eeeeee;
-            }
-
-						#h1 {
-
-						    color: black;
-						    float: left;
-						    padding-left: 2px;
-						    padding-bottom: 15px;
-						    padding-top: 15px;
-						    font-size: 22px;
-								width: 100%;
-
-						}
-
-						#l2 {
-
-						    float: left;
-						    background-color: black;
-						    height: 1px;
-						    width: calc(100% - 30px);
-						    border-top: solid #eeeeee;
-						    border-width: 5px;
-
-						}
-
-						#m1 {
-
-						    line-height: 25px;
-						    background-color: black;
-						    color: #eeeeee;
-						    height: 50px;
-						    width: 150px;
-						    float: left;
-						    padding: 2px;
-						    border-right: solid #eeeeee;
-						    font-size: 20px;
-
-						}
-
-						#mf {
-
-						    background-color: black;
-						    height: 54px;
-						    width: calc(100% - 186px);
-						    float: left;
-
-						}
-
-						#m1 a:link, #m1 a:visited {
-								text-decoration:none;
-								color: #eeeeee;
-						}
-
-						#footer {
-
-						    float: left;
-						    width: 100%;
-						    height: 30px;
-
-						}
-
-						.gap2 {
-
-						    float: left;
-						    width: 100%;
-						    height: 1px;
-
-						}
-
-		</style>
-
-	</head>
-	<body>
-
-				<div id="m1"><a href="javascript:history.back()"><em>Back</em></a></div>
-				<div id="mf"></div>
-<!--        <div id="back"><a href="javascript:history.back()"><em>Back</em></a></div> -->
-				<div id="l2"></div>
-
-				<div id="h1">Senegal | <em>Smart Irrigation</em></div>
-
-        <img src="photos/senegal_500.jpg" class="photo">
-
-				<div class="gap2"></div>
-
-        <div id="text">
-            <p>As part of a USAID Powering Agriculture grant I have been working
-							on smart irrigation at The Sustainable Enginnering Lab.</p>
-        </div>
-
-				<div id="l2"></div>
-        <div id="link_bar">
-            <a href="http://sel.columbia.edu/smart-solar-irrigation/"><em>blog_link</em></a>
-        </div>
-
-				<div id="footer"></div>
-
-	</body>
+  </body>
 </html>

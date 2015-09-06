@@ -6,7 +6,9 @@ body {
     background-color: #eeeeee;
     font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
     font-size: 15px;
-    min-width: 500px;
+    min-width: 550px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 ul {
