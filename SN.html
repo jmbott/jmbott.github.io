@@ -3,7 +3,7 @@
 <html>
 	<head>
 
-		<title>India</title>
+		<title>Senegal</title>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
 		<style type="text/css">
@@ -68,17 +68,19 @@
         <script type="text/javascript">
             <!--
             var image1=new Image()
-            image1.src="photos/15.jpg"
+            image1.src="photos/21.jpg"
             var image2=new Image()
-            image2.src="photos/16.jpg"
+            image2.src="photos/22.jpg"
             var image3=new Image()
-            image3.src="photos/17.jpg"
+            image3.src="photos/23.jpg"
             var image4=new Image()
-            image4.src="photos/18.jpg"
+            image4.src="photos/24.jpg"
             var image5=new Image()
-            image5.src="photos/19.jpg"
+            image5.src="photos/25.jpg"
 						var image6=new Image()
-            image6.src="photos/20.jpg"
+						image6.src="photos/26.jpg"
+						var image7=new Image()
+						image7.src="photos/27.jpg"
             //-->
         </script>
 
@@ -94,14 +96,14 @@
         <div id="back"><a href="javascript:history.back()"><em>Back</em></a></div>
 
         <a onclick="next()" href=#>
-            <img src="photos/15.jpg" name="pic" class="photo" alt="Picture">
+            <img src="photos/21.jpg" name="pic" class="photo" alt="Picture">
         </a>
 
         <script type="text/javascript">
             <!--
             var step=1
             function next(){
-                if(step<6)
+                if(step<7)
                     step++;
                 else
                     step=1;
@@ -111,7 +113,7 @@
                 if(step>1)
                     step--;
                 else
-                    step=6;
+                    step=7;
                 document.images.pic.src=eval("image"+step+".src");
             }
             document.onkeydown = function(e) {
