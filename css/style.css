@@ -1,32 +1,20 @@
 /* style for project archive */
+@import url("grid.css");
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+body {
+  background-color: #92a8d1;
 }
 
-li {
-  float: left;
-  border-right:1px solid #bbb;
+img {
+  width: 100%;
 }
 
-li:last-child {
-  border-right: none;
+.header {
+  margin-top: 20px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
+.footer {
+  margin-bottom: 100px;
 }
 
 .active {
