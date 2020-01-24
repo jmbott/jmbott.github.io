@@ -14,66 +14,244 @@
 
     <!-- Font -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
       rel="stylesheet"
       type="text/css"
     >
 
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link id="pagestyle" rel="stylesheet" type="text/css" href="">
-
-    <!-- indicate what to import and page type -->
-    <script src="js/cookie.js"></script>
-
   </head>
   <body>
+
+    <script type='text/javascript'>
+
+      // /* function here to expand based on id inputs */
+      // function expandFocus(id_svg,id_poly) {
+      //   shrinkFocus()
+      //   // console.log("info expand");
+      //   // console.log(document.documentElement.clientWidth);
+      //   width = document.documentElement.clientWidth - 50;
+      //   widthEl = width - 10;
+      //   pOut = "10 10, " + widthEl + " 10, " + widthEl + " " + widthEl + ", 10 " + widthEl;
+      //   document.getElementById(id_svg).style.height = width;
+      //   document.getElementById(id_svg).style.width = width;
+      //   document.getElementById(id_poly).setAttribute("points", pOut);
+      // }
+      //
+      // function shrinkFocus() {
+      //   // console.log(document.querySelectorAll('[id*=-svg]'));
+      //   // console.log(document.querySelectorAll('[id*=-poly]'));
+      //   var ids = document.querySelectorAll('[id*=-svg]'), i;
+      //   for (i = 0; i < ids.length; ++i) {
+      //     // console.log(ids[i]);
+      //     ids[i].style.height = 250;
+      //     ids[i].style.width = 250;
+      //   }
+      //   var ids = document.querySelectorAll('[id*=-poly]'), i;
+      //   for (i = 0; i < ids.length; ++i) {
+      //     // console.log(ids[i]);
+      //     ids[i].setAttribute("points", points="10 10, 240 10, 240 240, 10 240");
+      //   }
+      // }
+
+      fetch("./info.html")
+      .then(response => {
+        return response.text()
+      })
+      .then(data => {
+        document.querySelector("sq-info").innerHTML = data;
+      });
+
+      /* shrink all squares back to standard */
+      function shrinkFocus() {
+        // console.log(document.querySelectorAll('[id*=-sq]'));
+        var sq = document.querySelectorAll('[id*=-sq]'), i;
+        for (i = 0; i < sq.length; ++i) {
+          $(sq).css("height",250);
+          $(sq).css("width",250);
+        }
+        var sq_title = document.querySelectorAll('[id*=-sq-title]'), i;
+        for (i = 0; i < sq_title.length; ++i) {
+          $(sq_title).css("height","auto");
+          $(sq_title).css("width",200);
+        }
+      }
+
+      /* function here to expand based on id inputs */
+      function expandFocus(id_sq, id_sq_title) {
+        shrinkFocus();
+        // console.log("expand focus");
+        width = $( document ).width() - 50;
+        widthEl = width - 50;
+        // console.log(document.getElementById(id_sq));
+        // console.log(document.getElementById(id_sq_title));
+        $("#" + id_sq).css("width",width);
+        $("#" + id_sq).css("height","auto");
+        $("#" + id_sq_title).css("width",widthEl);
+        $("#" + id_sq_title).css("height","auto");
+      }
+
+      /* expand list of ids based on form */
+      function expand(sq_list) {
+        for (let i = 0; i < sq_list.length; i++) {
+          $(document).ready(function() {
+            $("#" + sq_list[i]).click(function(e){
+              expandFocus(sq_list[i],sq_list[i] + "-title");
+              e.stopPropagation();
+              return false;
+            });
+          });
+        }
+      }
+
+      /* List of ids to cycle through */
+      ids = ["info-sq","acacia-sq","solar-sq","guzzy-sq","pru-sq",
+        "coliberate-sq","iot-sq","senegal-sq","rtc-sq","india-sq","at-sq"];
+
+      $(document).ready(function() {
+        $(document).click(function(e){
+          shrinkFocus();
+          return false;
+        });
+      });
+
+      expand(ids);
+
+    </script>
 
     <!-- Start Document -->
     <div class="header"></div>
 
     <!-- Primary Page Layout -->
-    <div class="container" style="margin: 1%;">
-      <div class="row">
-        <div class="twelve column">
-          <h2>Project Archive</h2>
+    <div id="bg" class="container">
 
-          <div class="menu">
-            <p>
-              <a class="active" href="#home">Home</a> &nbsp;
-              <a href="#archive">Archive</a> &nbsp;
-              <a href="#info">Info</a> &nbsp;
-            </p>
-          </div>
-
-          <div id="button_bar">
-            <p>
-              By default this site uses only enough CSS to standardize it
-              across browsers. <br>
-              Choose to add or remove technologies:
-              <small>(This will create a cookie to maintain changes)</small><br>
-              <button onclick="addCSS('')">Simply HTML</button>
-              <button onclick="addCSS('css/style.css')">Add CSS</button>
-              <button onclick="">Add Javascript</button>
-              <button onclick="">Switch to React Site</button>
-              <br>
-            </p>
-          </div>
-
-          <div id="h2">Current Project | <em>Senegal Irrigation</em></div>
-          <hr>
-
-          <div id="p1"><img src="assets/photos/senegal.jpg"></div>
-
-          <div class="link_bar">
-            <a href="senegal.html"><em>more_detail</em></a>
-          </div>
-
-        </div>
+      <div id="home-sq" class="square-main">
+        <a href="/" target="_self">
+          <div id="home-sq-title" class="square-title">Home</div>
+        </a>
       </div>
+      <div id="info-sq" class="square">
+        <div id="info-sq-title" class="square-title">Info</div>
+        <sq-info id="info-sq-hide"></sq-info>
+      </div>
+      <div id="acacia-sq" class="square">
+        <div id="acacia-sq-title" class="square-title">Acacia Irrigation</div>
+        <sq-acacia id="acacia-sq-hide"></sq-acacia>
+      </div>
+      <div id="solar-sq" class="square">
+        <div id="solar-sq-title" class="square-title">SharedSolar</div>
+        <sq-solar id="solar-sq-hide"></sq-solar>
+      </div>
+      <div id="guzzy-sq" class="square">
+        <div id="guzzy-sq-title" class="square-title">guzzy.ca</div>
+        <sq-solar id="guzzy-sq-hide"></sq-solar>
+      </div>
+      <div id="pru-sq" class="square">
+        <div id="pru-sq-title" class="square-title">PRU Motor Control</div>
+        <sq-solar id="pru-sq-hide"></sq-solar>
+      </div>
+      <div id="coliberate-sq" class="square">
+        <div id="coliberate-sq-title" class="square-title">CoLiberate</div>
+        <sq-solar id="coliberate-sq-hide"></sq-solar>
+      </div>
+      <div id="iot-sq" class="square">
+        <div id="iot-sq-title" class="square-title">IOT Radio Network</div>
+        <sq-solar id="iot-sq-hide"></sq-solar>
+      </div>
+      <div id="senegal-sq" class="square">
+        <div id="senegal-sq-title" class="square-title">Senegal Photographs</div>
+        <sq-solar id="senegal-sq-hide"></sq-solar>
+      </div>
+      <div id="rtc-sq" class="square">
+        <div id="rtc-sq-title" class="square-title">RTC PCBs</div>
+        <sq-solar id="rtc-sq-hide"></sq-solar>
+      </div>
+      <div id="india-sq" class="square">
+        <div id="india-sq-title" class="square-title">India Photographs</div>
+        <sq-solar id="india-sq-hide"></sq-solar>
+      </div>
+      <div id="at-sq" class="square">
+        <div id="at-sq-title" class="square-title">Appalachian Trail<br>Photographs</div>
+        <sq-solar id="at-sq-hide"></sq-solar>
+      </div>
+
+      <!-- <svg height="250" width="250">
+        <polygon points="10 10, 240 10, 240 240, 10 240" class="main-polygon-svg"/>
+        <a class="text-svg" href="/" target="_blank">
+          <text x="50%" y="50%" fill="black">Home</text></a>
+      </svg>
+      <svg id="info-svg" height="250" width="250">
+        <polygon id="info-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('info-svg','info-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">Info</text></a>
+          <foreignObject x="25" y="25" width="200" height="200">
+            <div id="info-hide" w3-include-html="info.html"></div>
+          </foreignObject>
+      </svg>
+      <svg id="acacia-svg" height="250" width="250">
+        <polygon id="acacia-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('acacia-svg','acacia-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">Acacia Irrigation</text></a>
+      </svg>
+      <svg id="solar-svg" height="250" width="250">
+        <polygon id="solar-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('solar-svg','solar-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">SharedSolar</text></a>
+      </svg>
+      <svg id="guzzy-svg" height="250" width="250">
+        <polygon id="guzzy-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('guzzy-svg','guzzy-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">Guzzy.ca</text></a>
+      </svg>
+      <svg id="pru-svg" height="250" width="250">
+        <polygon id="pru-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('pru-svg','pru-poly')" target="_blank">
+          <text x="50%" y="45%" fill="black">PRU Motor</text>
+          <text x="50%" y="60%" fill="black">Control</text></a>
+      </svg>
+      <svg id="coliberate-svg" height="250" width="250">
+        <polygon id="coliberate-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('coliberate-svg','coliberate-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">CoLiberate</text></a>
+      </svg>
+      <svg id="iot-svg" height="250" width="250">
+        <polygon id="iot-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('iot-svg','iot-poly')" target="_blank">
+          <text x="50%" y="45%" fill="black">IOT Radio</text>
+          <text x="50%" y="60%" fill="black">Network</text></a>
+      </svg>
+      <svg id="senegal-svg" height="250" width="250">
+        <polygon id="senegal-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('senegal-svg','senegal-poly')" target="_blank">
+          <text x="50%" y="45%" fill="black">Senegal</text>
+          <text x="50%" y="60%" fill="black">Photographs</text></a>
+      </svg>
+      <svg id="rtc-svg" height="250" width="250">
+        <polygon id="rtc-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('rtc-svg','rtc-poly')" target="_blank">
+          <text x="50%" y="50%" fill="black">RTC PCBs</text></a>
+      </svg>
+      <svg id="india-svg" height="250" width="250">
+        <polygon id="india-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('india-svg','india-poly')" target="_blank">
+          <text x="50%" y="45%" fill="black">India</text>
+          <text x="50%" y="60%" fill="black">Photographs</text></a>
+      </svg>
+      <svg id="at-svg" height="250" width="250">
+        <polygon id="at-poly" points="10 10, 240 10, 240 240, 10 240" class="polygon-svg"/>
+        <a class="text-svg" onclick="expandFocus('at-svg','at-poly')" target="_blank">
+          <text x="50%" y="45%" fill="black">Appalachian Trail</text>
+          <text x="50%" y="60%" fill="black">Photographs</text></a>
+      </svg> -->
     </div>
 
     <!-- End Document -->

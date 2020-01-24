@@ -1,12 +1,28 @@
 /* style for project archive */
-@import url("grid.css");
 
 body {
-  background-color: #92a8d1;
+  background:
+    linear-gradient(45deg, rgba(229, 128, 66, 0.45)
+      0%, rgba(229, 128, 66, 0.45) 25%,rgba(212, 160, 112, 0.45)
+      25%, rgba(212, 160, 112, 0.45) 50%,rgba(195, 191, 157, 0.45)
+      50%, rgba(195, 191, 157, 0.45) 75%,rgba(178, 223, 203, 0.45)
+      75%, rgba(178, 223, 203, 0.45) 100%),
+    linear-gradient(135deg, rgb(251, 248, 117) 0%, rgb(251, 248, 117)
+      25%,rgb(246, 167, 110) 25%, rgb(246, 167, 110) 50%,rgb(240, 85, 102)
+      50%, rgb(240, 85, 102) 75%,rgb(235, 4, 95) 75%, rgb(235, 4, 95) 100%);
+
+  max-width: 1200px;
+  margin: auto;
 }
 
-img {
-  width: 100%;
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
 }
 
 .header {
@@ -19,4 +35,85 @@ img {
 
 .active {
   background-color: #5479FF;
+}
+
+.container {
+  text-align: center;
+}
+
+.square-main {
+  display: inline-block;
+
+  background: #fff;
+  width: 250px;
+  height: 250px;
+  border-style: solid;
+  border-width: 5px;
+
+  margin: 10px;
+}
+
+.square {
+  display: inline-block;
+
+  background: #fff;
+  border-style: solid;
+  border-width: 2.5px;
+
+  margin: 10px;
+}
+
+.square-title {
+
+  display: inline-grid;
+  vertical-align: top;
+
+  font-size: 35px;
+  line-height: 40px;
+  font-family: 'Bebas Neue', cursive;
+
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 0;
+
+}
+
+#home-sq {width: 250px; height: 250px;}
+#home-sq-title {width: 200px; height: auto;}
+
+#info-sq {width: 250px; height: 250px;}
+#info-sq-title {width: 200px; height: auto;}
+
+#acacia-sq {width: 250px; height: 250px;}
+#acacia-sq-title {width: 200px; height: auto;}
+
+#solar-sq {width: 250px; height: 250px;}
+#solar-sq-title {width: 200px; height: auto;}
+
+#guzzy-sq {width: 250px; height: 250px;}
+#guzzy-sq-title {width: 200px; height: auto;}
+
+#pru-sq {width: 250px; height: 250px;}
+#pru-sq-title {width: 200px; height: auto;}
+
+#coliberate-sq {width: 250px; height: 250px;}
+#coliberate-sq-title {width: 200px; height: auto;}
+
+#iot-sq {width: 250px; height: 250px;}
+#iot-sq-title {width: 200px; height: auto;}
+
+#senegal-sq {width: 250px; height: 250px;}
+#senegal-sq-title {width: 200px; height: auto;}
+
+#rtc-sq {width: 250px; height: 250px;}
+#rtc-sq-title {width: 200px; height: auto;}
+
+#india-sq {width: 250px; height: 250px;}
+#india-sq-title {width: 200px; height: auto;}
+
+#at-sq {width: 250px; height: 250px;}
+#at-sq-title {width: 200px; height: auto;}
+
+#info-sq-hide {
+  display: none;
 }
