@@ -64,7 +64,6 @@ a:visited {
 }
 
 .square-title {
-
   display: inline-grid;
   vertical-align: top;
 
@@ -75,45 +74,113 @@ a:visited {
   margin: auto;
   padding-top: 70px;
   padding-bottom: 0;
-
 }
+
+/* .sq-hide {
+  display: none;
+}
+
+.sq-normal {
+
+} */
 
 #home-sq {width: 250px; height: 250px;}
 #home-sq-title {width: 200px; height: auto;}
 
 #info-sq {width: 250px; height: 250px;}
 #info-sq-title {width: 200px; height: auto;}
+#info-sq-hide {display: none;}
 
 #acacia-sq {width: 250px; height: 250px;}
 #acacia-sq-title {width: 200px; height: auto;}
+#acacia-sq-hide {display: none;}
 
 #solar-sq {width: 250px; height: 250px;}
 #solar-sq-title {width: 200px; height: auto;}
+#solar-sq-hide {display: none;}
 
 #guzzy-sq {width: 250px; height: 250px;}
 #guzzy-sq-title {width: 200px; height: auto;}
+#guzzy-sq-hide {display: none;}
 
 #pru-sq {width: 250px; height: 250px;}
 #pru-sq-title {width: 200px; height: auto;}
+#pru-sq-hide {display: none;}
 
 #coliberate-sq {width: 250px; height: 250px;}
 #coliberate-sq-title {width: 200px; height: auto;}
+#coliberate-sq-hide {display: none;}
 
 #iot-sq {width: 250px; height: 250px;}
 #iot-sq-title {width: 200px; height: auto;}
+#iot-sq-hide {display: none;}
 
 #senegal-sq {width: 250px; height: 250px;}
 #senegal-sq-title {width: 200px; height: auto;}
+#senegal-sq-hide {display: none;}
 
 #rtc-sq {width: 250px; height: 250px;}
 #rtc-sq-title {width: 200px; height: auto;}
+#rtc-sq-hide {display: none;}
 
 #india-sq {width: 250px; height: 250px;}
 #india-sq-title {width: 200px; height: auto;}
+#india-sq-hide {display: none;}
 
 #at-sq {width: 250px; height: 250px;}
 #at-sq-title {width: 200px; height: auto;}
+#at-sq-hide {display: none;}
 
-#info-sq-hide {
-  display: none;
+.project {
+  padding: 20px;
+}
+
+/* .project a {
+  position: relative;
+  z-index: 10000;
+} */
+
+.h2 {
+  float: left;
+  color: black;
+  text-align: left;
+  padding: 2px;
+  padding-top: 20px;
+  font-size: 22px;
+  width: 100%;
+}
+
+.content {
+  float: left;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  line-height: 135%;
+}
+
+.link_bar {
+  float: left;
+  background-color: black;
+  color: white;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 135%;
+  width: 100%;
+}
+
+.link_bar a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.l2 {
+  float: left;
+  background-color: black;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 5px;
 }
