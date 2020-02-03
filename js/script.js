@@ -69,7 +69,7 @@ const shrink_focus = () => {
 
 /* get the width to set elements to */
 const get_width = () => {
-  width = $( document ).width() - 50;
+  width = window.innerWidth - 50;
   if (width > 1150) {width = 1150;}
   if (width < 250) {width = 250;}
   widthEl = width - 50;
@@ -92,7 +92,68 @@ const expand_focus = (id, id_sq, id_sq_title, id_sq_hide) => {
   $("#" + id_sq_hide).css("display","inline-grid");
   $("#" + id_sq_hide).css("margin","auto");
   $("#" + id_sq_hide).css("width","auto");
+  // $("#" + id_sq_hide).addClass("hide-id"); // cleaner?
+
   expanded = id_sq;
+
+  // allow browser to redraw - https://stackoverflow.com/a/4575011/6669558
+  setInterval(add_links, 0);
+
+};
+
+const add_links = () => {
+  $("#contact").attr("href","mailto:millerbott@gmail.com");
+  $('#contact').unbind().click(function(e) {
+    document.location = 'mailto:millerbott@gmail.com';
+  });
+  $("#github").attr("href","https://github.com/jmbott");
+  $('#github').unbind().click(function(e) {
+    document.location = 'https://github.com/jmbott';
+  });
+  $("#linkedin").attr("href","https://www.linkedin.com/in/jmb2341");
+  $('#linkedin').unbind().click(function(e) {
+    document.location = 'https://www.linkedin.com/in/jmb2341';
+  });
+  // $("#resume").attr("href","asssets/docs/resume.pdf");
+  // $('#resume').unbind().click(function(e) {
+  //   document.location = 'asssets/docs/resume.pdf';
+  // });
+  $("#acacia-irrigation").attr("href","https://qsel.columbia.edu/acacia-irrigation-project/");
+  $('#acacia-irrigation').unbind().click(function(e) {
+    document.location = 'https://qsel.columbia.edu/acacia-irrigation-project/';
+  });
+  $("#shared-solar").attr("href","https://qsel.columbia.edu/shared-solar/");
+  $('#shared-solar').unbind().click(function(e) {
+    document.location = 'https://qsel.columbia.edu/shared-solar/';
+  });
+  $("#coliberate-project").attr("href","https://gitlab.com/open-coliberate");
+  $('#coliberate-project').unbind().click(function(e) {
+    document.location = 'https://gitlab.com/open-coliberate';
+  });
+  $("#guzzy-project").attr("href","https://guzzy.ca/");
+  $('#guzzy-project').unbind().click(function(e) {
+    document.location = 'https://guzzy.ca/';
+  });
+  $("#ti-pru").attr("href","https://processors.wiki.ti.com/index.php/PRU-ICSS");
+  $('#ti-pru').unbind().click(function(e) {
+    document.location = 'https://processors.wiki.ti.com/index.php/PRU-ICSS';
+  });
+  // $("#pru-src").attr("href","");
+  // $('#pru-src').unbind().click(function(e) {
+  //   document.location = '';
+  // });
+  $("#iot-radio-src").attr("href","https://github.com/jmbott/iot-radio-network");
+  $('#iot-radio-src').unbind().click(function(e) {
+    document.location = 'https://github.com/jmbott/iot-radio-network';
+  });
+  $("#iot-radio-project").attr("href","https://iotcolumbia2017jsjc.weebly.com/");
+  $('#iot-radio-project').unbind().click(function(e) {
+    document.location = 'https://iotcolumbia2017jsjc.weebly.com/';
+  });
+  $("#ds1307").attr("href","assets/docs/DS1307.pdf");
+  $('#ds1307').unbind().click(function(e) {
+    document.location = 'assets/docs/DS1307.pdf';
+  });
 };
 
 /* add links to expand list of ids based on form */
@@ -111,15 +172,37 @@ $(document).ready(function() {
   });
 });
 
+/* delay resize trigger - https://stackoverflow.com/a/5926068/6669558 */
+let rtime;
+let timeout = false;
+let delta = 200;
+
+$(window).resize(function() {
+  rtime = new Date();
+  if (timeout === false) {
+    timeout = true;
+    setTimeout(resize_end, delta);
+  }
+});
+
+const resize_end = () => {
+  if (new Date() - rtime < delta) {
+    setTimeout(resize_end, delta);
+  } else {
+    timeout = false;
+    correct_width();
+  }
+};
+
 /* add resize trigger to expanded square id that adjusts the width */
-$(window).resize(function () {
+const correct_width = () => {
   // console.log("resize",expanded);
   if (expanded != null) {
     width = get_width();
-    // console.log(width);
+    console.log(width);
     $("#" + expanded).css("width",width);
   }
-});
+};
 
 /* add links to all listed ids */
 expand(ids);

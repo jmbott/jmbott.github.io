@@ -1,0 +1,97 @@
+<div class="project">
+
+  <div class="h2">Acacia | <em>Smart Irrigation</em></div>
+
+  <div class="gap"></div>
+  <div class="l2"></div>
+
+  <img class="photo" src="assets/photos/acacia/senegal.jpg">
+  <div class="gap2"></div>
+
+  <div class="content">
+    <p>
+      Acacia Irrigation has been one of my main projects at The Quadracci
+      Sustainable Engineering Lab. Initially inspired by SharedSolar, another
+      qSEL project, the focus is on finding a more economically feasible way to
+      provide irrigation to smallholder farmers in the developing world.
+      Initially as part of a USAID Powering Agriculture grant three pilot solar
+      systems, 4.8 to 6.8kW, were installed in Gabar, Senegal. They provide
+      irrigation water to twenty-one half hectare farms. This shared model
+      increased the solar utilization with the design requirements of no
+      storage and as consistent water supply as possible. There is no large
+      battery array or water tower included. Water is distributed directly by
+      means of drip lines or stored at ground level in basins for hand
+      distribution. The motivation behind this design decision is economical
+      and based on current farmer practices.
+    </p>
+    <p>
+      The second iteration of Acacia is targeted towards commercial sales, away
+      from a utility model. Inexpensively adding cloud-based control to off the
+      shelf pumping hardware for individual farmer systems. It is easier to
+      finance a smaller device and with remote data logging and control some
+      maintenance can be provided from afar. If the market allows there is
+      opportunity to sell monitoring services to the farmer as well. In this
+      case, by serving a larger variety of customers, more farmers can be aided
+      with a better service.
+    </p>
+  </div>
+  <div class="gap2"></div>
+
+  <img class="photo" src="assets/photos/acacia/site_3.jpg">
+  <div class="gap2"></div>
+
+  <div class="content">
+    <h3>Revision One:</h3>
+    <p>
+      The first revision of the Acacia system was controlled by a Raspberry Pi.
+      I created a "hat" PCB for the Pi to integrate all the sensors and
+      switches. A pyranometer and a temperature sensor are used to approximate
+      shortwave radiation and PV cell temperature. Power available is estimated
+      based on those readings. The board also includes a real-time clock for
+      more accurate logs, an RS-485 to USB converter for reading an array of
+      smart meters, and a transistor array for signaling the relays on the power
+      electronics.
+    </p>
+    <p>
+      A companion web application allowed for local payments, historical record
+      keeping, and automatic scheduling. This revision taught me a lot about
+      the Linux operating system, about Python, the Modbus communication
+      protocol, and electronic prototyping. The three pilot systems have run
+      for five plus years at this point, maintenance is sustained by a PAYGO
+      payment scheme. With any luck they will run for many more seasons.
+    </p>
+
+    <div class="gap"></div>
+
+    <h3>Revision Two:</h3>
+    <p>
+      The second revision of the Acacia system is controlled with an Arduino
+      style microcontroller. The intent was to simplify the controller as much
+      as possible. Custom PCBs were created to interface with any off the shelf
+      solar inverter or VFD that exposes an RS-485 communication port and a low
+      voltage DC power supply. Only critical data is stored persistently and
+      fluctuations in power are expected. On different versions the controllers
+      either have an IR input or a cellular modem for communication with the
+      cloud. The IR is for lower cost or out of network installations.
+    </p>
+    <p>
+      A cloud connected IOT device needs a cloud-based web application. This
+      revision communicates with that server where historical usage and payment
+      data can be stored. This revision taught me more about C++ and minimizing
+      memory usage; program memory but more importantly SRAM. The power
+      controller communication can be simulated to simplify testing. The ability
+      to properly test each component, software or hardware, can make all the
+      difference in a production system.
+    </p>
+  </div>
+  <div class="gap2"></div>
+
+  <img class="photo" src="assets/photos/acacia/senegal-water.jpg">
+
+  <div class="gap"></div>
+
+  <div class="l2"></div>
+  <div class="link_bar">
+    <a id="acacia-irrigation"><em>project_page</em></a>
+  </div>
+</div>
