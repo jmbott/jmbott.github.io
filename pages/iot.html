@@ -1,16 +1,36 @@
 <div class="project">
 
-  <div class="h2">IOT | <em>Radio Network</em></div>
+  <div class="h2">IOT Radio Network | <em>LoRa</em></div>
 
   <div class="gap"></div>
   <div class="l2"></div>
+
+  <div class="content">
+    <p>
+      This project was for an internet of things class during my masters. It is
+      the base for creating a network of RS-485 devices. Each device is equipped
+      with a LoRa radio module that polls the different Modbus registers and
+      communicates back to a central LoRa radio concentrator. The central unit
+      is also equipped with an Ethernet controller to post accumulated results
+      to a local webapp.
+    </p>
+  </div>
+  <div class="gap2"></div>
 
   <img class="photo" src="assets/photos/iot-radio/iot-project.png">
   <div class="gap2"></div>
 
   <div class="content">
     <p>
-      Radio Network Info
+      This project uses a library, lightOS, made by a friend of mine to organize
+      tasks on embedded controllers. It divides duties into small chunks and
+      uses interrupts to call them on set intervals. The whole project is
+      structured on this framework. Remote nodes listen for incoming
+      transmissions, communicate to electricity meters with RS-485 ports, and
+      store state information in memory. Central concentrator units periodically
+      poll all the remote nodes and display the collected information locally.
+      Arduino controllers made by Adafruit were used for this project. Further
+      details can be found on the project github or report website.
     </p>
   </div>
   <div class="gap2"></div>

@@ -1,6 +1,6 @@
 <div class="project">
 
-  <div class="h2">TI PRU-ICSS | <em>Motor Control</em></div>
+  <div class="h2">TI PRU | <em>Motor Control</em></div>
 
   <div class="gap"></div>
   <div class="l2"></div>
@@ -10,7 +10,23 @@
 
   <div class="content">
     <p>
-      Motor Control Info
+      While working in Matthias Preindl's Motor Drives and Power Electronics Lab
+      I built the interface card above and put together the power electronics
+      test bench below. The interface card is designed to sit on a TI launchpad
+      controller but can also work with a BeagleBone Black or similar. It
+      provides an array of power rails and translates logic levels for ADCs,
+      encoders, SPI interfaces, and PWM outputs. The interface board includes
+      an auxiliary board that can be positioned further from high voltage
+      equipment to deactivate the PWM outputs or change their logic level.
+    </p>
+    <p>
+      The BeagleBone Black includes a PRU, Programmable Real-Time Unit Subsystem,
+      that can be used to provide motor control decisions inbetween very high
+      switching frequencies in a predictable manner. The challenge lies in the
+      limited PRU resources, linking them with the SoC tools provided by the
+      BeagleBone's main ARM controller. The PRUs can be programmed in Assembly
+      but TI also provides a proprietary C compiler that I used during this
+      project.
     </p>
   </div>
   <div class="gap2"></div>
@@ -23,5 +39,6 @@
   <div class="link_bar">
     <!-- <a id="pru-src"><em>src</em></a> -->
     <a id="ti-pru"><em>ti_pru</em></a>
+    <a id="lab-site"><em>lab_site</em></a>
   </div>
 </div>
