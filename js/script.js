@@ -142,6 +142,10 @@ const add_links = () => {
   $('#acacia-irrigation').unbind().click(function(e) {
     document.location = 'https://qsel.columbia.edu/acacia-irrigation-project/';
   });
+  $("#acacia-web").attr("href","http://acaciairrigation.org/");
+  $('#acacia-web').unbind().click(function(e) {
+    document.location = 'http://acaciairrigation.org/';
+  });
   $("#shared-solar").attr("href","https://qsel.columbia.edu/shared-solar/");
   $('#shared-solar').unbind().click(function(e) {
     document.location = 'https://qsel.columbia.edu/shared-solar/';
