@@ -217,6 +217,26 @@ const add_links = () => {
     back("senegal-7");
     e.stopPropagation(); // bubbling propagation by default
   });
+
+  $(document).keydown(function(e) {
+    e = e || window.event;
+    let id;
+    if (expanded == "at-sq") {id = "at-14";}
+    else if (expanded == "india-sq") {id = "india-6";}
+    else if (expanded == "senegal-sq") {id = "senegal-7";}
+    else {return;}
+    switch (e.keyCode) {
+      case 39:
+        // console.log(39);
+        next(id);
+        break;
+      case 37:
+        // console.log(37);
+        back(id);
+        break;
+    }
+    e.stopPropagation(); // bubbling propagation by default
+  });
 };
 
 /* flip to the next photo, up to quantity */
