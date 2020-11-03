@@ -134,9 +134,9 @@ const add_links = () => {
   // $('#stackoverflow').unbind().click(function(e) {
   //   document.location = 'https://stackoverflow.com/users/6669558/jmb2341';
   // });
-  // $("#resume").attr("href","asssets/docs/resume.pdf");
+  // $("#resume").attr("href","asssets/docs/bott-resume.pdf");
   // $('#resume').unbind().click(function(e) {
-  //   document.location = 'asssets/docs/resume.pdf';
+  //   document.location = 'assets/docs/bott-resume.pdf';
   // });
   $("#acacia-irrigation").attr("href","https://qsel.columbia.edu/acacia-irrigation-project/");
   $('#acacia-irrigation').unbind().click(function(e) {
