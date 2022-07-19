@@ -4,8 +4,8 @@
 let expanded = null;
 
 /* list of sq id identifiers to cycle through */
-ids = ["info","acacia","solar","guzzy","pru","coliberate","iot","senegal",
-  "rtc","india","at"];
+ids = ["info","irr-detect","acacia","solar","guzzy","pru","coliberate",
+  "iot","ceramics","senegal","rtc","india","at"];
 
 /* get page/project content from pages directory */
 const get_page = async (page) => {
@@ -138,6 +138,10 @@ const add_links = () => {
   // $('#resume').unbind().click(function(e) {
   //   document.location = 'assets/docs/bott-resume.pdf';
   // });
+  $("#irr-detect-paper").attr("href","https://ieeexplore.ieee.org/document/9342946");
+  $('#irr-detect-paper').unbind().click(function(e) {
+    document.location = 'https://ieeexplore.ieee.org/document/9342946';
+  });
   $("#acacia-irrigation").attr("href","https://qsel.columbia.edu/acacia-irrigation-project/");
   $('#acacia-irrigation').unbind().click(function(e) {
     document.location = 'https://qsel.columbia.edu/acacia-irrigation-project/';
@@ -158,9 +162,9 @@ const add_links = () => {
   $('#guzzy-project').unbind().click(function(e) {
     document.location = 'https://guzzy.ca/';
   });
-  $("#ti-pru").attr("href","https://processors.wiki.ti.com/index.php/PRU-ICSS");
+  $("#ti-pru").attr("href","https://software-dl.ti.com/processor-sdk-linux/esd/docs/08_00_00_21/common/PRU-ICSS/Overview.html");
   $('#ti-pru').unbind().click(function(e) {
-    document.location = 'https://processors.wiki.ti.com/index.php/PRU-ICSS';
+    document.location = 'https://software-dl.ti.com/processor-sdk-linux/esd/docs/08_00_00_21/common/PRU-ICSS/Overview.html';
   });
   $("#lab-site").attr("href","https://mplab.ee.columbia.edu/");
   $('#lab-site').unbind().click(function(e) {
@@ -178,6 +182,10 @@ const add_links = () => {
   $('#iot-radio-project').unbind().click(function(e) {
     document.location = 'https://iotcolumbia2017jsjc.weebly.com/';
   });
+  $("#adjective-ceramics").attr("href","https://www.instagram.com/adjectiveceramics/");
+  $('#adjective-ceramics').unbind().click(function(e) {
+    document.location = 'https://www.instagram.com/adjectiveceramics/';
+  });
   $("#ds1307").attr("href","assets/docs/DS1307.pdf");
   $('#ds1307').unbind().click(function(e) {
     document.location = 'assets/docs/DS1307.pdf';
@@ -188,13 +196,13 @@ const add_links = () => {
   });
 
   // photo page carousels
-  $("#at-14").attr("src","assets/photos/at/1.jpg");
+  $("#at-12").attr("src","assets/photos/at/1.jpg");
   $('.at.next').unbind().click(function(e) {
-    next("at-14"); // id and # of photos
+    next("at-12"); // id and # of photos
     e.stopPropagation(); // bubbling propagation by default
   });
   $(".at.back").unbind().click(function(e) {
-    back("at-14");
+    back("at-12");
     e.stopPropagation(); // bubbling propagation by default
   });
 
@@ -221,7 +229,7 @@ const add_links = () => {
   $(document).keydown(function(e) {
     e = e || window.event;
     let id;
-    if (expanded == "at-sq") {id = "at-14";}
+    if (expanded == "at-sq") {id = "at-12";}
     else if (expanded == "india-sq") {id = "india-6";}
     else if (expanded == "senegal-sq") {id = "senegal-7";}
     else {return;}
